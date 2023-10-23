@@ -8,7 +8,7 @@ exports.create = async (ownerId, elData) => {
     const user = await this.getById(ownerId);
     elData.owner = {
         _id: user._id,
-  
+        username: user.username,
         email: user.email
     };
 
